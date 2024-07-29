@@ -1,0 +1,203 @@
+version: "3.1"
+rules:
+  - rule: user start
+    steps:
+    - intent: start
+    - action: utter_ask_language
+
+  - rule: russian
+    steps:
+    - intent: choose_language
+      entities:
+        - language: "RU"
+    - slot_was_set:
+      - language: "RU"
+    - action: action_greet
+    - action: action_greet_second
+
+  - rule: english
+    steps:
+    - intent: choose_language
+      entities:
+        - language: "EN"
+    - slot_was_set:
+      - language: "EN"
+    - action: action_greet
+    - action: action_greet_second
+
+  - rule: choose_greet
+    steps:
+    - intent: greet
+      entities:
+        - language: "RU"
+    - slot_was_set:
+      - language: "RU"
+    - action: action_random_greeting
+    - action: action_greet_second
+
+  - rule: choose_greet
+    steps:
+    - intent: greet
+      entities:
+        - language: "EN"
+    - slot_was_set:
+      - language: "EN"
+    - action: action_random_greeting
+    - action: action_greet_second
+
+  - rule: choose_help
+    steps:
+    - intent: user_help
+      entities:
+        - language: "RU"
+    - slot_was_set:
+      - language: "RU"
+    - action: action_help
+    - action: action_greet_second
+
+  - rule: choose_help
+    steps:
+    - intent: user_help
+      entities:
+        - language: "EN"
+    - slot_was_set:
+      - language: "EN"
+    - action: action_help
+    - action: action_greet_second
+
+  - rule: choose_no_match
+    steps:
+    - intent: user_no_match
+      entities:
+        - language: "RU"
+    - slot_was_set:
+      - language: "RU"
+    - action: action_no_match
+    - action: action_greet_second
+
+  - rule: choose_no_match
+    steps:
+    - intent: user_no_match
+      entities:
+        - language: "EN"
+    - slot_was_set:
+      - language: "EN"
+    - action: action_no_match
+    - action: action_greet_second
+
+  - rule: choose_thanks
+    steps:
+    - intent: thanks
+      entities:
+        - language: "RU"
+    - slot_was_set:
+      - language: "RU"
+    - action: action_thanks
+
+  - rule: choose_thanks
+    steps:
+    - intent: thanks
+      entities:
+        - language: "EN"
+    - slot_was_set:
+      - language: "EN"
+    - action: action_thanks
+
+  - rule: section1
+    steps:
+    - intent: section1
+    - action: action_doc
+
+  - rule: section4 content
+    steps:
+    - intent: section4
+    - action: action_doc_path1
+
+  - rule: section8 content
+    steps:
+    - intent: section8
+    - action: action_doc
+
+  - rule: section9 content
+    steps:
+    - intent: section9
+    - action: action_doc_path1_2
+    - action: action_greet_second
+
+  - rule: section5 content
+    steps:
+    - intent: section5
+    - action: action_doc_path2
+
+  - rule: section6 content
+    steps:
+    - intent: section6
+    - action: action_doc_path3
+
+  - rule: section7 content
+    steps:
+    - intent: section7
+    - action: action_doc_path4
+
+  - rule: section2 content
+    steps:
+    - intent: section2
+    - action: action_doc_company
+
+  - rule: section13 content
+    steps:
+    - intent: section13
+    - action: action_doc_path4
+
+  - rule: section10 content
+    steps:
+    - intent: section10
+    - action: action_doc_company2
+
+  - rule: section11 content
+    steps:
+    - intent: section11
+    - action: action_doc_company2
+  
+  - rule: section12 content
+    steps:
+    - intent: section12
+    - action: action_doc_company2
+
+  - rule: section3 content
+    steps:
+    - intent: section3
+      entities:
+        - language: "RU"
+    - slot_was_set:
+      - language: "RU"
+    - action: action_doc_tax
+
+  - rule: section3 content
+    steps:
+    - intent: section3
+      entities:
+        - language: "EN"
+    - slot_was_set:
+      - language: "EN"
+    - action: action_doc_tax
+
+  - rule: section17 content
+    steps:
+    - intent: section17
+    - action: action_doc_path4
+
+  - rule: section14 content
+    steps:
+    - intent: section14
+    - action: action_doc_company2
+
+  - rule: section15 content
+    steps:
+    - intent: section15
+    - action: action_doc_company2
+  
+  - rule: section16 content
+    steps:
+    - intent: section16
+    - action: action_doc_company2

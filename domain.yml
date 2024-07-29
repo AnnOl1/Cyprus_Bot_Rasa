@@ -1,0 +1,64 @@
+version: "3.1"
+intents:
+  - start
+  - choose_language
+  - greet
+  - user_help
+  - user_no_match
+  - thanks
+  - section1
+  - section2
+  - section3
+  - section4
+  - section5
+  - section6
+  - section7
+  - section8
+  - section9
+  - section10
+  - section11
+  - section12
+  - section13
+  - section14
+  - section15
+  - section16
+  - section17
+
+
+actions:
+  - action_greet
+  - action_random_greeting
+  - action_help
+  - action_greet_second
+  - action_no_match
+  - action_thanks
+  - action_doc
+  - action_utter_custom_buttons
+  - action_doc_path1
+  - action_doc_path1_2
+  - action_doc_path2
+  - action_doc_path3
+  - action_doc_path4
+  - action_doc_company
+  - action_doc_company2
+  - action_doc_tax
+
+entities:
+  - language
+
+slots:
+  language:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: language
+
+responses:
+  utter_ask_language:
+    - text: "Please choose your language:"
+      buttons:
+        - title: "Русский"
+          payload: '/choose_language{{"language":"ru"}}'
+        - title: "English"
+          payload: '/choose_language{{"language":"en"}}'

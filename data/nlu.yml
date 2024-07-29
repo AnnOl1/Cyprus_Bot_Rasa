@@ -1,0 +1,108 @@
+version: "3.1"
+nlu:
+  - intent: start
+    examples: |
+      - /start
+
+  - intent: choose_language
+    examples: |
+      - Русский
+      - English
+
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Привет
+      - Здравствуй
+
+  - intent: user_help
+    examples: |
+      - /help
+      - Что ты умеешь?
+      - What you can do?
+
+  - intent: user_no_match
+    examples: |
+      - no match
+
+  - intent: thanks
+    examples: |
+      - спасибо
+      - благодарю
+      - нет, спасибо
+      - нет это все
+      - нет все спасибо
+      - нет вопросов
+      - thank you
+      - no, thanks
+      - no this is it
+      - no questions
+
+  - intent: section1
+    examples: |
+      - /section1
+
+  - intent: section2
+    examples: |
+      - /section2
+
+  - intent: section3
+    examples: |
+      - /section3
+
+  - intent: section4
+    examples: |
+      - /section4
+  
+  - intent: section5
+    examples: |
+      - /section5
+
+  - intent: section6
+    examples: |
+      - /section6
+  
+  - intent: section7
+    examples: |
+      - /section7
+  
+  - intent: section8
+    examples: |
+      - /section8
+  
+  - intent: section9
+    examples: |
+      - /section9
+
+  - intent: section10
+    examples: |
+      - /section10
+  
+  - intent: section11
+    examples: |
+      - /section11
+  
+  - intent: section12
+    examples: |
+      - /section12
+  
+  - intent: section13
+    examples: |
+      - /section13
+
+  - intent: section14
+    examples: |
+      - /section14
+  
+  - intent: section15
+    examples: |
+      - /section15
+  
+  - intent: section16
+    examples: |
+      - /section16
+  
+  - intent: section17
+    examples: |
+      - /section17
